@@ -4,10 +4,10 @@ import { industries } from '@/data/industries'
 
 const OnboardingPage = () => {
   return (
-    <div>OnboardingPage
-        <OnboardingForm 
-            industries={industries}
-        />
+    <div>
+			<OnboardingForm 
+				industries={industries}
+			/>
     </div>
   )
 }
