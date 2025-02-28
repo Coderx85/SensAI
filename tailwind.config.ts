@@ -8,6 +8,17 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+	container: {
+		center: true,
+		padding: "15px",
+	},
+	screens: {
+	sm: "640px",
+	md: "768px",
+	lg: "960px",
+	xl: "1200px",
+	},
+
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
@@ -21,7 +32,7 @@ export default {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
+  				DEFAULT: '#036db0',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
