@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import { checkUser } from "@/lib/checkUser";
+import { Contact2Icon } from "lucide-react";
 
 export default async function Header() {
   await checkUser();
@@ -51,6 +52,19 @@ export default async function Header() {
               </Button>
             </Link>
 
+            <Link href={"contact-us"}>
+              <Button
+                variant='outline'
+                className="hidden md:inline-flex items-center gap-2"
+              >
+                <Contact2Icon className="h-4 w-4" />
+                Contact Us
+              </Button>
+              <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
+                <Contact2Icon className="h-4 w-4" />
+              </Button>
+            </Link>
+
             {/* Growth Tools Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -58,7 +72,7 @@ export default async function Header() {
                   <StarsIcon className="h-4 w-4" />
                   <span className="hidden md:block">Growth Tools</span>
                   <ChevronDown className="h-4 w-4" />
-                </Button>
+                </Button> 
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuItem asChild>
